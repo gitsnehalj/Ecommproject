@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+   <script src="{% static 'js/main.js'%}"></script>
+ 
+    
+</head>
+<body>
+    <h1>Heloo in templates,,,,</h1>
+    <p>data in dictinary is:{{greet}}</p>
+  {{x}}<br>
+
+  {{y}}
+  {% comment %}
+  {% if x > y %}
+     <p> {{x}}is greater</p>
+  {% elif y > z %}  
+     <p>{{y}}is greater</p>
+  {% elif z > x %}  
+     <p>{{z}}is greater</p>
+  {% else %}  
+     <p>equal numbers</p>
+  {% endif %}  
+ 
+
+  <p>list is:</p>
+  {% for x in l %}
+     <p>{{x}}</p>
+  {% endfor %}
+  {% endcomment %}
+  {{prodcts}}
+  <p>My products is</p>
+  {% for x in products %}
+    <strong>Sr.no:</strong>{{forloop.counter}}<br>
+    <strong>Name:</strong>{{x.name}}<br>
+    <strong>Category:</strong>{{x.cat}}<br>
+    <strong>Price:</strong>{{x.price}}<br>
+  {% endfor %} 
+ <button onclick="greet()">Click here</button>
+
+ <br>
+ <br>
+ <br>
+ {% load static %}
+ <img src="{% static 'images/image.jpeg' %}" width="200px" height="150px" />
+</body>
+</html>
